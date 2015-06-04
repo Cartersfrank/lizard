@@ -1,0 +1,1 @@
+DROP TABLE DataAnalysis.dbo.TempTable_VisitsPGTCheck
