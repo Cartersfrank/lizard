@@ -51,3 +51,11 @@ movies.plot(kind='scatter',x='duration',y='star_rating')
 
 movies.groupby('genre').duration.mean()
 
+movies.boxplot(column='duration',by='content_rating')
+
+movies.sort('star_rating',ascending=False).groupby('genre').first()
+
+movies[movies.title.duplicated()==True]
+movies[(movies.title.duplicated()==True) & (movies.actors_list.duplicated()==True)]
+
+movies.groupby('genre').filter(lambda x: len(x) >= 10).star_rating.mean()
