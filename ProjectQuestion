@@ -1,0 +1,24 @@
+## Project Question and Data Set
+
+Question: Do NBA officials change their behavior in order to extend best of 7 playoff series?
+
+Using data scraped from NBA.com and Pro-Basketball-Reference.com, I'd like to use game, team and player statistics 
+from the modern era NBA (going back to at least 2003, when all rounds of the NBA playoffs were extended to 7 games) 
+to create a model that is capable of predicting the number of fouls per minute of playtime that a team will receive 
+(per minute to account for overtime). If I can create a model that is sufficiently capable of doing so, then I am 
+specifically interested in the significance and coefficient of a dummy input that will indicate if a given team has 
+lost 3 games of a 7 game series prior to game 6 - i.e. if they lose, the series will be over, but if they win they 
+will play an additional game.
+
+Dataset:
+
+Each record will be the outcome of a game for a single team (each game will appear twice, once for each team)
+
+Output: # of Fouls / Minute of Playtime
+
+Possible Inputes:
+Dummy for Home vs. Away
+Average # Fouls Across Last x Games
+Average Time per Posession Across Last x Games
+Size (Physical Attributes) Discrepancy for Starting Lineup vs. Opponent's
+Dummy for Rivalry Match
